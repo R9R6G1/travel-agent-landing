@@ -11,7 +11,7 @@ const configVertical = {
 	grabCursor: true,
 	a11y: false,
 	freeMode: true,
-	speed: 2000,
+	speed: 1300,
 	loop: true,
 	autoplay: {
 		delay: 0.0,
@@ -41,10 +41,11 @@ const configHorizontal = {
 	},
 };
 
-// Устанавливаем брейкпоинт
+// брейкпоинт
 const breakpoint = window.matchMedia('(max-width:1023px)');
 
-// Ф-я которая проверяет срабатываение медиа запроса в breakpoint
+// провіряє
+ breakpoint
 const breakpointChecker = function () {
 	if (breakpoint.matches === true) {
 		swiperHorizontal = new Swiper('#testimonials-horizontal-swiper', configHorizontal);
